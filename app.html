@@ -45,7 +45,7 @@
         --> 
         <script>
             function aumentarTempo() {
-                criaMoscaTempoInicial -= 200; // Diminui em 1 segundo (1000 milissegundos)
+                criaMoscaTempoInicial -= 20; // Diminui em 1 segundo (1000 milissegundos)
                 clearInterval(criaMosca); // Limpa o intervalo anterior para evitar múltiplos intervalos
                 criaMosca = setInterval(function() {
                     posicaoRamdomicaMosca();
