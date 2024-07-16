@@ -1,0 +1,113 @@
+html {
+    cursor: url(../imagens/mata_mosca.png) 30px 30px, auto;
+}
+
+.mosca1 {
+    width: 50px;
+    height: 50px;
+}
+
+.mosca2 {
+    width: 70px;
+    height: 70px;
+}
+
+.mosca3 {
+    width: 90px;
+    height: 90px;
+}
+
+.ladoA {
+    transform: scaleX(1);
+}
+
+.ladoB {
+    transform: scaleX(-1);
+}
+
+body {
+    background: url(../imagens/bg.jpg) no-repeat;
+    background-size: 100%; 
+}
+
+img {
+    margin-top: 20px;
+}
+
+@media (max-width: 991.98px) {
+    body {
+        background: url(../imagens/bg.jpg) no-repeat top;
+        background-size: 300%;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .vidas img {
+        width: 30%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px){
+    body {
+        background: url(../imagens/bg.jpg) no-repeat top;
+        background-size: 230%;
+    }
+
+    img {
+        width: 40%;
+    }
+
+    .vidas img {
+        width: 30%;
+    }
+}
+
+
+.painel {
+    position: absolute;
+    width: 220px;
+    padding: 10px;
+    bottom: 0px;
+    border-top: 1px #fff;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.vidas {
+    width: 100px;
+}
+
+.contador {
+    margin-left: 5px;
+}
+
+#contador {
+    display: inline;
+}
+
+.cronometro {
+    margin-left: 5px;
+}
+
+#instrucao {
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgba(72, 209, 204, 0.5);
+}
+
+#ranking {
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+    background-color: rgba(72, 209, 204, 0.5);
+}
+
+#ranking div{
+    display: inline;
+}
