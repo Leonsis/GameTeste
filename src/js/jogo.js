@@ -1,15 +1,12 @@
-// Primeiro é nescessario encontra a altura e alrgura da pagina.
-var altura = 0; // Variavel para function ajustaTamanhoPalcoJogo().
-var largura = 0; // Variavel para function ajustaTamanhoPalcoJogo().
-var vidas = 1; // Variavel para function posicaoRamdomicaMosca().
-var tempo = 50; // Variavel que vai ficar dentro da variavel cronometro.
-var nivel = window.location.search; // Variavel para recuperar o nivel do jogo.
-nivel = nivel.replace('?', '');// Está sendo atribuido o novo valor para a variavel nivel, onde não possui a ?.
-var criaMoscaTempoInicial = 1500; // Variavel para o tempo que aparece o mosquito.
-var mosca // Variavel na qual foi colocada uma tag html que foi criada pelo comando .createElement('img').
+// Declaração de variaveis
+let altura = 0;
+let largura = 0;
+let vidas = 1;
+let criaMoscaTempoInicial = 1500;
+let mosca
+let contador = 0;
 
-var contador = 0; // Variavel para cintar quantas moscas foram mortas.
-
+// Na function ajustaTamanhoPalcoJogo() vai ser usado altura e largura
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight;
     largura = window.innerWidth;
@@ -17,10 +14,9 @@ function ajustaTamanhoPalcoJogo() {
 ajustaTamanhoPalcoJogo();
 
 
-// Segundo fazer com que a imagem apareça em destinos aleatorioas na pagina web.
+// Na function posicaoRamdomicaMosca() vair ser usador vidas, largura, altura, mosca.
 function posicaoRamdomicaMosca() {
-    //Remover a mosca anterior (Caso exista)
-    if(document.getElementById('mosca')) {
+    if(document.getElementById('mosca')) { //Estrutura de descisão para remover a mosca anterior (Caso exista)
         document.getElementById('mosca').remove();
         if(vidas > 3) {
             window.location.href = 'fim_do_jogo.html';
