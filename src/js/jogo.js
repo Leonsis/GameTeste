@@ -3,7 +3,7 @@ let altura = 0;
 let largura = 0;
 let vidas = 1;
 let criaMoscaTempoInicial = 1500;
-let mosca
+const mosca = document.createElement('img');
 let contador = 0;
 
 // Na function ajustaTamanhoPalcoJogo() vai ser usado altura e largura
@@ -27,8 +27,8 @@ function posicaoRamdomicaMosca() {
     }
 
     // Criando as posições randomicamente
-    var posicaoX = Math.floor(Math.random() * largura - 90);
-    var posicaoY = Math.floor(Math.random() * altura - 140);
+    let posicaoX = Math.floor(Math.random() * largura - 90);
+    let posicaoY = Math.floor(Math.random() * altura - 140);
     
     /*
         Aqui está sendo feira uma estrutura de condição
@@ -37,8 +37,7 @@ function posicaoRamdomicaMosca() {
     posicaoX = posicaoX < 0 ? 0 : posicaoX;
     posicaoY = posicaoY < 0 ? 0 : posicaoY;
 
-    //Criar o elemento  html
-    mosca = document.createElement('img');
+    //Incluinsdo parametros na tag que foi criada dentro da vareavel mosca.
     mosca.src = 'src/imagens/mosca.png';
     mosca.className = tamanhoAleatorio() + ' ' + ladoAleatorio();
     mosca.style.left = posicaoX + 'px';
@@ -67,7 +66,7 @@ function saidaContador() {
 
 // Está function vai servir para criar tamanhos aleatorios para a imagem.
 function tamanhoAleatorio() {
-    var classe = Math.floor(Math.random() * 3);
+    let classe = Math.floor(Math.random() * 3);
     switch(classe) {
         case 0:
             return 'mosca1'
@@ -79,7 +78,7 @@ function tamanhoAleatorio() {
 }
 
 function ladoAleatorio() {
-    var classe = Math.floor(Math.random() * 2);
+    let classe = Math.floor(Math.random() * 2);
     switch(classe) {
         case 0:
             return 'ladoA'
